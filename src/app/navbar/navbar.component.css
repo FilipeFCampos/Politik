@@ -25,10 +25,6 @@ nav {
     color: darkgray;
 }
 
-#mobile-search-bar {
-    margin-top: 18px;
-}
-
 @media screen and (max-width: 600px) {
     #desktop-search-bar {
       display: none;

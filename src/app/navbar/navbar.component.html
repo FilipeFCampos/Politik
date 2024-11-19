@@ -31,34 +31,54 @@
             </div>
 
             <div class="offcanvas-body">
-                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+
+                <div id="mobile-search-bar">
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-success" type="submit">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </form>
+                </div>
+
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3" style="margin-top: 10px;">
                     <li class="nav-item">
                         
                         <a class="nav-link active" aria-current="page" id="home" href="#">
-                            <i class="bi bi-house"></i>
-                            Home
+                            @if (currentRoute === '/') {
+                                <i class="bi bi-house-fill"></i>
+                                <span style="font-weight: bold;">Home</span>   
+                            }
+                            @else {
+                                <i class="bi bi-house"></i>
+                                <span>Home</span>  
+                            }
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" id="feed" href="#">
-                            <i class="bi bi-grid-1x2"></i>
-                            Feed
+                            @if (currentRoute === '/feed') {
+                                <i class="bi bi-grid-1x2-fill"></i>
+                                <span style="font-weight: bold;">Feed</span>   
+                            }
+                            @else {
+                                <i class="bi bi-grid-1x2"></i>
+                                <span>Feed</span> 
+                            }
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" id="contato" href="#">
-                            <i class="bi bi-chat-left"></i>
-                            Contato
+                            @if (currentRoute === '/contato') {
+                                <i class="bi bi-chat-left-fill"></i>
+                                <span style="font-weight: bold;">Contato</span>   
+                            }
+                            @else {
+                                <i class="bi bi-chat-left"></i>
+                                <span>Contato</span> 
+                            }
                         </a>
                     </li>
-                    <div id="mobile-search-bar">
-                        <form class="d-flex" role="search">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-success" type="submit">
-                                <i class="bi bi-search"></i>
-                            </button>
-                        </form>
-                    </div>
                 </ul>
             </div>
         </div>
