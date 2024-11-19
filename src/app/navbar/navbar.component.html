@@ -1,0 +1,67 @@
+
+
+<nav class="navbar navbar-dark bg-dark bg-body-tertiary fixed-top">
+    <div class="container-fluid">
+
+        <a class="navbar-brand" href="#">
+            <img src="logo1.svg" alt="logo" class="logo">
+        </a>
+
+        <div id="desktop-search-bar">
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-success" type="submit">
+                    <i class="bi bi-search"></i>
+                </button>
+            </form>
+        </div>
+
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
+            aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+        <div class="offcanvas offcanvas-end offcanvas-style text-bg-dark" style="max-width: 300px;" tabindex="-1" id="offcanvasDarkNavbar"
+            aria-labelledby="offcanvasDarkNavbarLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Sidebar</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+
+            <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        
+                        <a class="nav-link active" aria-current="page" id="home" href="#">
+                            <i class="bi bi-house"></i>
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" id="feed" href="#">
+                            <i class="bi bi-grid-1x2"></i>
+                            Feed
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" id="contato" href="#">
+                            <i class="bi bi-chat-left"></i>
+                            Contato
+                        </a>
+                    </li>
+                    <div id="mobile-search-bar">
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-success" type="submit">
+                                <i class="bi bi-search"></i>
+                            </button>
+                        </form>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
