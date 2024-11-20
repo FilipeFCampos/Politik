@@ -25,6 +25,18 @@ nav {
     color: darkgray;
 }
 
+#login {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 8.5%;
+    left: 101.635px;
+}
+
+#login button {
+    font-size: larger;
+}
+
 @media screen and (max-width: 600px) {
     #desktop-search-bar {
       display: none;

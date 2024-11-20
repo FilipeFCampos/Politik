@@ -1,12 +1,12 @@
 
-
+<!--Navbar-->
 <nav class="navbar navbar-dark bg-dark bg-body-tertiary fixed-top">
     <div class="container-fluid">
-
+        <!--Logo-->
         <a class="navbar-brand" href="#">
             <img src="logo1.svg" alt="logo" class="logo">
         </a>
-
+        <!--Barra de pesquisa desktop-->
         <div id="desktop-search-bar">
             <form class="d-flex" role="search">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -16,22 +16,23 @@
             </form>
         </div>
 
-
+        <!--Botão de ativação da sidebar-->
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
             aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-
+        <!--Sidebar-->
         <div class="offcanvas offcanvas-end offcanvas-style text-bg-dark" style="max-width: 300px;" tabindex="-1" id="offcanvasDarkNavbar"
             aria-labelledby="offcanvasDarkNavbarLabel">
+            <!--Título da sidebar-->
             <div class="offcanvas-header">
                 <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Sidebar</h5>
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
-
+            <!--Corpo da sidebar-->
             <div class="offcanvas-body">
-
+                <!--Barra de pesquisa mobile-->
                 <div id="mobile-search-bar">
                     <form class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -40,10 +41,10 @@
                         </button>
                     </form>
                 </div>
-
+                <!--Links-->
                 <ul class="navbar-nav justify-content-end flex-grow-1 pe-3" style="margin-top: 10px;">
+                    <!--Home-->
                     <li class="nav-item">
-                        
                         <a class="nav-link active" aria-current="page" id="home" href="#">
                             @if (currentRoute === '/') {
                                 <i class="bi bi-house-fill"></i>
@@ -55,6 +56,7 @@
                             }
                         </a>
                     </li>
+                    <!--Feed-->
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" id="feed" href="#">
                             @if (currentRoute === '/feed') {
@@ -67,6 +69,7 @@
                             }
                         </a>
                     </li>
+                    <!--Contato-->
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" id="contato" href="#">
                             @if (currentRoute === '/contato') {
@@ -80,6 +83,13 @@
                         </a>
                     </li>
                 </ul>
+                <!--Botão de login-->
+                <div id="login">
+                    <button type="button" class="btn btn-success">
+                        <i class="bi bi-person-circle"></i>
+                        Login
+                    </button>
+                </div>
             </div>
         </div>
     </div>
