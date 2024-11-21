@@ -45,7 +45,7 @@
                 <ul class="navbar-nav justify-content-end flex-grow-1 pe-3" style="margin-top: 10px;">
                     <!--Home-->
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" id="home" href="#">
+                        <a class="nav-link active" aria-current="page" id="home" routerLink="/">
                             @if (currentRoute === '/') {
                                 <i class="bi bi-house-fill"></i>
                                 <span style="font-weight: bold;">Home</span>   
@@ -58,7 +58,7 @@
                     </li>
                     <!--Feed-->
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" id="feed" href="#">
+                        <a class="nav-link active" aria-current="page" id="feed" routerLink="feed">
                             @if (currentRoute === '/feed') {
                                 <i class="bi bi-grid-1x2-fill"></i>
                                 <span style="font-weight: bold;">Feed</span>   
@@ -71,7 +71,7 @@
                     </li>
                     <!--Contato-->
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" id="contato" href="#">
+                        <a class="nav-link active" aria-current="page" id="contato" routerLink="contato">
                             @if (currentRoute === '/contato') {
                                 <i class="bi bi-chat-left-fill"></i>
                                 <span style="font-weight: bold;">Contato</span>   
