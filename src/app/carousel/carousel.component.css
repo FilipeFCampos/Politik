@@ -1,0 +1,4 @@
+#carousel-baixo{
+    border-radius: var(--Corner-Small, 8px);
+    background: linear-gradient(90deg, #009440 0%, #014F23 100%);   
+}

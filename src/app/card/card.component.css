@@ -1,0 +1,16 @@
+.card{
+    display: flex;
+    justify-content: center;
+}
+
+#botao-card{
+    color: #FFF;
+    text-align: center;
+    font-family: 'Roboto';
+    font-size: 46px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%;
+    border-radius: 0px 0px var(--Corner-Small, 8px) var(--Corner-Small, 8px);
+    background: #014F23;    
+}
