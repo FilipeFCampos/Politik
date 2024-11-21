@@ -9,6 +9,10 @@
     justify-content: center ;
 }
 
+#separator{
+    margin-top: 70px;
+}
+
 #caixa-texto{
     padding: 10px;
     margin-bottom: 75px;
