@@ -1,98 +1,144 @@
 <br><br><br><br><br>
 <div style="display: flex; justify-content: center; align-items: center;">
-    <div class="content">
-        <h1>Solicite um cadastro</h1>
-        <label for="nome" class="form-label">Dados pessoais</label>
-        <div class="input-group mb-3" style="display: flex;">
-            <span class="input-group-text" id="basic-addon1">Nome:</span>
-            <input type="text" id="nome" class="form-control" placeholder="Seu nome completo" aria-label="nome"
-                aria-describedby="basic-addon1">
+    <form action="">
 
-            <span class="input-group-text" id="basic-addon1.1">Nascimento:</span>
-            <input type="date" class="form-control" placeholder="Seu nome completo" aria-label="nome"
-                    aria-describedby="basic-addon1">
-                   
-        </div>
-
-        <div class="input-group mb-3">
-            <span class="input-group-text" id="basic-addon2">&#64; Email:</span>
-            <input type="email" class="form-control" id="email" placeholder="exemplo@gmail.com" aria-label="email"
-                aria-describedby="basic-addon2">
-
-            <span class="input-group-text" id="basic-addon2.1">CPF:</span>
-            <input #campoCPF type="text" class="form-control" maxlength="14" id="CPF" placeholder="Digite o seu CPF" aria-label="cpf"
-                aria-describedby="basic-addon1">
-
-            <span class="input-group-text" id="basic-addon2.2">CNPJ:</span>
-            <input #campoCNPJ type="text" class="form-control" maxlength="18" id="CNPJ" placeholder="Digite o seu CNPJ" aria-label="cnpj"
-                aria-describedby="basic-addon1">
-        </div>
-
-        <label for="basic-url" class="form-label">Endereço</label>
-        <div class="input-group mb-3">
-
-            <span class="input-group-text" id="basic-addon3">Endereço:</span>
-            <input type="text" class="form-control" id="endereço" placeholder="Rua do Exemplo 9999" aria-label="endereço"
-                aria-describedby="basic-addon2">
+        <div class="content">
+            <h1>Solicite um cadastro</h1>
+            <label for="nome" class="form-label">Dados pessoais</label>
+            <div class="input-group mb-3" style="display: flex;">
+                <span class="input-group-text" id="basic-addon1">Nome:</span>
+                <input type="text" id="nome" class="form-control" placeholder="Seu nome completo" aria-label="nome"
+                    aria-describedby="basic-addon1" required>
+    
+                <span class="input-group-text" id="basic-addon1.1">Nascimento:</span>
+                <input type="date" class="form-control" id="nascimento" placeholder="Seu nome completo" aria-label="nome"
+                        aria-describedby="basic-addon1" required>
+                       
+            </div>
+    
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon2">&#64; Email:</span>
+                <input type="email" class="form-control" id="email" placeholder="exemplo@gmail.com" aria-label="email"
+                    aria-describedby="basic-addon2" required>
+    
+                <span class="input-group-text" id="basic-addon2.1">CPF:</span>
+                <input #campoCPF type="text" class="form-control" maxlength="14" id="CPF" placeholder="Digite o seu CPF" aria-label="cpf"
+                    aria-describedby="basic-addon1" required>
+    
+                <span class="input-group-text" id="basic-addon2.2">CNPJ:</span>
+                <input #campoCandidatoCNPJ type="text" class="form-control" maxlength="18" id="CNPJ-candidato" placeholder="Digite o seu CNPJ" aria-label="cnpj-candidato"
+                    aria-describedby="basic-addon1" required>
+            </div>
+    
+            <label for="input-group mb-3" class="form-label">Endereço</label>
+            <div class="input-group mb-3">
+    
+                <span class="input-group-text" id="basic-addon3">Endereço:</span>
+                <input type="text" class="form-control" id="endereço" placeholder="Rua do Exemplo 9999" aria-label="endereço"
+                    aria-describedby="basic-addon2" required>
+                
+                <span class="input-group-text" id="basic-addon3.1">Cidade:</span>
+                <input type="text" class="form-control" id="cidade" placeholder="Digite a sua cidade" aria-label="cidade"
+                    aria-describedby="basic-addon1" required>
+    
+                <span class="input-group-text" id="basic-addon3.2">Bairro:</span>
+                <input type="text" class="form-control" id="cidade" placeholder="Digite o seu bairro" aria-label="bairro"
+                    aria-describedby="basic-addon1" required>
+            </div>
+    
+            <div class="input-group mb-3">
+    
+                <span class="input-group-text" id="basic-addon3.3">CEP:</span>
+                <input #campoCEP type="text" class="form-control" id="CEP" maxlength="9" placeholder="Digite o código postal" aria-label="cep"
+                    aria-describedby="basic-addon1" required>
+    
+                <span class="input-group-text" id="basic-addon3.4">Estado:</span>
+                <select id="estado" class="form-select-sm" name="estado" required>
+                    <option selected disabled></option>
+                    <option value="AC">AC</option>
+                    <option value="AL">AL</option>
+                    <option value="AP">AP</option>
+                    <option value="AM">AM</option>
+                    <option value="BA">BA</option>
+                    <option value="CE">CE</option>
+                    <option value="DF">DF</option>
+                    <option value="ES">ES</option>
+                    <option value="GO">GO</option>
+                    <option value="MA">MA</option>
+                    <option value="MT">MT</option>
+                    <option value="MS">MS</option>
+                    <option value="MG">MG</option>
+                    <option value="PA">PA</option>
+                    <option value="PB">PB</option>
+                    <option value="PR">PR</option>
+                    <option value="PE">PE</option>
+                    <option value="PI">PI</option>
+                    <option value="RJ">RJ</option>
+                    <option value="RN">RN</option>
+                    <option value="RS">RS</option>
+                    <option value="RO">RO</option>
+                    <option value="RR">RR</option>
+                    <option value="SC">SC</option>
+                    <option value="SP">SP</option>
+                    <option value="SE">SE</option>
+                    <option value="TO">TO</option>
+                </select>
+            </div>
+    
+            <label for="input-group mb-3" class="form-label">Informações do partido/candidato</label>
+    
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon4">Partido</span>
+                <input type="text" class="form-control" id="partido" placeholder="Nome do partido" aria-label="partido" required>
+    
+                <span class="input-group-text" id="basic-addon4.1">Sigla</span>
+                <input type="text" class="form-control" id="sigla" placeholder="Sigla do partido" aria-label="partido" required>
+    
+                <span class="input-group-text" id="basic-addon4.2">CNPJ:</span>
+                <input #campoPartidoCNPJ type="text" class="form-control" maxlength="18" id="CNPJ-partido" placeholder="Digite o CNPJ do partido" aria-label="cnpj-partido"
+                    aria-describedby="basic-addon1" required>
+            </div>
             
-            <span class="input-group-text" id="basic-addon3.1">Cidade:</span>
-            <input type="text" class="form-control" id="cidade" placeholder="Digite a sua cidade" aria-label="cidade"
-                aria-describedby="basic-addon1">
+            <div class="container text-center">
+                <div class="row">
+                  <div class="col-2" style="padding: 0px">
+                    <div class="input-group mb-3">
+                        
+                        <span class="input-group-text" id="basic-addon5">Cargo:</span>
+                        <select id="estado" class="form-select-sm" name="estado" required>
+                            <option selected disabled></option>
+                            <option value="federal">Federal</option>
+                            <option value="estadual">Estadual</option>
+                            <option value="municipal">Municipal</option>
+                        </select>
+                    </div>
+                  </div>
+                  
+                  <div class="col">
+                    <div class="input-group mb-3">
+            
+                        <span class="input-group-text" id="basic-addon3.3">{{ cargo }}</span>
+                        <input #campoCEP type="text" class="form-control" id="CEP" maxlength="9" placeholder="Digite o código postal" aria-label="cep"
+                            aria-describedby="basic-addon1" required>
+            
+                        <span class="input-group-text" id="basic-addon3.4">Cargo:</span>
+                        <select id="estado" class="form-select-sm" name="estado" required>
+                            <option selected disabled></option>
+                            <option value="federal">Federal</option>
+                            <option value="estadual">Estadual</option>
+                            <option value="municipal">Municipal</option>
+                        </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-            <span class="input-group-text" id="basic-addon3.2">Bairro:</span>
-            <input type="text" class="form-control" id="cidade" placeholder="Digite o seu bairro" aria-label="bairro"
-                aria-describedby="basic-addon1">
-
+    
+            <div class="input-group">
+                <span class="input-group-text">With textarea</span>
+                <textarea class="form-control" aria-label="With textarea"></textarea>
+            </div>
         </div>
-
-        <div class="input-group mb-3">
-
-            <span class="input-group-text" id="basic-addon3.2">CEP:</span>
-            <input type="text" class="form-control" id="CEP" placeholder="Digite o código postal" aria-label="cep"
-                aria-describedby="basic-addon1">
-
-            <span class="input-group-text" id="basic-addon3.2">Estado:</span>
-            <select id="estado" class="form-select-sm" name="estado">
-                <option value="AC">AC</option>
-                <option value="AL">AL</option>
-                <option value="AP">AP</option>
-                <option value="AM">AM</option>
-                <option value="BA">BA</option>
-                <option value="CE">CE</option>
-                <option value="DF">DF</option>
-                <option value="ES">ES</option>
-                <option value="GO">GO</option>
-                <option value="MA">MA</option>
-                <option value="MT">MT</option>
-                <option value="MS">MS</option>
-                <option value="MG">MG</option>
-                <option value="PA">PA</option>
-                <option value="PB">PB</option>
-                <option value="PR">PR</option>
-                <option value="PE">PE</option>
-                <option value="PI">PI</option>
-                <option value="RJ">RJ</option>
-                <option value="RN">RN</option>
-                <option value="RS">RS</option>
-                <option value="RO">RO</option>
-                <option value="RR">RR</option>
-                <option value="SC">SC</option>
-                <option value="SP">SP</option>
-                <option value="SE">SE</option>
-                <option value="TO">TO</option>
-            </select>
-        </div>
-
-        <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Username" aria-label="Username">
-            <span class="input-group-text">&#64;</span>
-            <input type="text" class="form-control" placeholder="Server" aria-label="Server">
-        </div>
-
-        <div class="input-group">
-            <span class="input-group-text">With textarea</span>
-            <textarea class="form-control" aria-label="With textarea"></textarea>
-        </div>
-    </div>
+    </form>
 </div>
 <br><br><br><br><br>
