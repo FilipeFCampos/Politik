@@ -1,4 +1,15 @@
 #carousel-baixo{
+    display: flex;
     border-radius: var(--Corner-Small, 8px);
-    background: linear-gradient(90deg, #009440 0%, #014F23 100%);   
+    background: linear-gradient(90deg, #009440 0%, #014F23 100%);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #FFF;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Roboto';
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
 }
