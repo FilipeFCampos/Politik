@@ -9,6 +9,11 @@
     justify-content: center ;
 }
 
+#cards{
+    display: flex;
+    justify-content: center;
+}
+
 #separator{
     margin-top: 70px;
 }
