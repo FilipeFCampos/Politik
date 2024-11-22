@@ -54,6 +54,4 @@ Atualmente, **Politik** está em fase inicial de desenvolvimento, sendo o projet
 | [<img src="https://avatars.githubusercontent.com/u/140771656?v=4" width=115><br><sub>André Lira</sub>](https://github.com/Aliragm) | [<img src="https://avatars.githubusercontent.com/u/79873886?v=4" width=115><br><sub>Filipe F. Campos</sub>](https://github.com/FilipeFCampos) | [<img src="https://avatars.githubusercontent.com/u/144023866?v=4" width=115><br><sub>Ulisses Damasceno</sub>](https://github.com/Ulissesdamasceno7) |
 | :---: | :---: | :---: |
 
-Explore o repositório e contribua para tornar o **Politik** a principal ferramenta de informação eleitoral no Brasil!
-
 <br>
