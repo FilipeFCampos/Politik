@@ -3,14 +3,29 @@
     justify-content: center;
 }
 
+#cards{
+    display: flex;
+    justify-content: center;
+}
+
+#images-card{
+    height: 316px;
+    flex-shrink: 0;
+}
+
 #botao-card{
+    display: flex;
     color: #FFF;
     text-align: center;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
     font-family: 'Roboto';
     font-size: 46px;
     font-style: normal;
     font-weight: 700;
     line-height: 140%;
     border-radius: 0px 0px var(--Corner-Small, 8px) var(--Corner-Small, 8px);
-    background: #014F23;    
+    background: #014F23;
+    height: 150px;    
 }
