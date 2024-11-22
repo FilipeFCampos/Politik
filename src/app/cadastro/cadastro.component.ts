@@ -16,6 +16,11 @@ export class CadastroComponent implements AfterViewInit {
   @ViewChild('campoPartidoCNPJ') campoPartidoCNPJ!: ElementRef<HTMLInputElement>;
 
   escopo?: string;
+  nome?: string;
+
+  setName(value: Event) {
+    this.nome = (value.target as HTMLSelectElement).value;
+  }
 
   setScope(value: Event) {
     this.escopo = (value.target as HTMLSelectElement).value;
