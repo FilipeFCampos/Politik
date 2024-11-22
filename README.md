@@ -1,35 +1,59 @@
 ![Politik](public/logo1.svg)
 
+*Transparência é a chave para o futuro*  
 
+---
 
-## O que é Politik?
+## Sobre o Projeto  
+**Politik** é uma plataforma web desenvolvida para centralizar informações eleitorais, oferecendo uma experiência acessível tanto para eleitores quanto para candidatos.  
 
-Politik é um website desenvolvido para facilitar o acesso a informação eleitoral para a população em períodos de eleição. Em nossa plataforma centralizamos as informações de todos os candidatos das eleições brasileiras por meio de um modelo de benefício mútuo, no qual oferecemos uma plataforma na qual os candidatos e partidos podem criar perfis para apresentar suas propostas e objetivos, consequentemente facilitando a pesquisa do cidadão brasileiro na hora de decidir seu voto e permitindo um voto mais consciente.
+Nosso objetivo é simplificar o acesso a informações sobre candidatos e partidos políticos durante os períodos eleitorais no Brasil. Por meio de um modelo de benefício mútuo:  
+- **Para os candidatos**: uma ferramenta para criar perfis, expor suas propostas e objetivos.  
+- **Para os eleitores**: uma central organizada para pesquisas rápidas e decisões de voto mais conscientes.  
 
-Atualmente essa plataforma se apresenta em período de desenvolvimento inicial e está sendo primariamente desenvolvida como o projeto final da disciplina de Desenvolvimento Web 1 do Bacharelado em Tecnologia da Informação - BTI UFRN/IMD.
+Atualmente, **Politik** está em fase inicial de desenvolvimento, sendo o projeto final da disciplina *Desenvolvimento Web 1* do **Bacharelado em Tecnologia da Informação** - BTI (UFRN/IMD).  
 
-Esse site está sendo desenvolvido utilizando [Angular CLI](https://github.com/angular/angular-cli) versão 18.2.12 e [Bootstrap](https://getbootstrap.com) versão 5.3.3.
+<br>
 
-## Development server
+## Tecnologias Utilizadas  
+### Frontend  
+- **[Angular CLI](https://angular.io/)** (versão 18.2.12)  
+  Framework robusto para a construção de aplicações web modernas.  
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- **[Bootstrap](https://getbootstrap.com/)** (versão 5.3.3)  
+  Biblioteca para estilização e design responsivo.  
 
-## Code scaffolding
+### Backend (Planejado)  
+- Ainda em definição. Possíveis escolhas incluem **Node.js**, **Django** ou **Spring Boot**.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+<br>
 
-## Build
+## Como Executar o Projeto Localmente  
+1. **Clone o Repositório**  
+   ```bash
+   git clone https://github.com/FilipeFCampos/Politik.git
+   cd Politik
+   ```  
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+2. **Instale as Dependências**  
+   Certifique-se de que você tem o Node.js instalado. Em seguida:  
+   ```bash
+   npm install
+   ```  
 
-## Running unit tests
+3. **Execute o Projeto**  
+   ```bash
+   ng serve
+   ```  
+   O projeto estará disponível em: `http://localhost:4200/`.
+   
+<br>
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Equipe
 
-## Running end-to-end tests
+| [<img src="https://avatars.githubusercontent.com/u/140771656?v=4" width=115><br><sub>André Lira</sub>](https://github.com/Aliragm) | [<img src="https://avatars.githubusercontent.com/u/79873886?v=4" width=115><br><sub>Filipe F. Campos</sub>](https://github.com/FilipeFCampos) | [<img src="https://avatars.githubusercontent.com/u/144023866?v=4" width=115><br><sub>Ulisses Damasceno</sub>](https://github.com/Ulissesdamasceno7) |
+| :---: | :---: | :---: |
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Explore o repositório e contribua para tornar o **Politik** a principal ferramenta de informação eleitoral no Brasil!
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+<br>
