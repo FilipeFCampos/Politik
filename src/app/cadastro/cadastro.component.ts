@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, EventEmitter, ElementRef, Output, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-cadastro',
@@ -15,7 +15,11 @@ export class CadastroComponent implements AfterViewInit {
   @ViewChild('campoCEP') campoCEP!: ElementRef<HTMLInputElement>;
   @ViewChild('campoPartidoCNPJ') campoPartidoCNPJ!: ElementRef<HTMLInputElement>;
 
-  cargo = '';
+  escopo?: string;
+
+  setScope(value: Event) {
+    this.escopo = (value.target as HTMLSelectElement).value;
+  }
 
   ngAfterViewInit(): void {
     // Listener de formatação do CPF
