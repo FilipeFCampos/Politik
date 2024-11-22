@@ -1,6 +1,14 @@
-# Politik
+![Politik](public/logo1.svg)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.12.
+
+
+## O que é Politik?
+
+Politik é um website desenvolvido para facilitar o acesso a informação eleitoral para a população em períodos de eleição. Em nossa plataforma centralizamos as informações de todos os candidatos das eleições brasileiras por meio de um modelo de benefício mútuo, no qual oferecemos uma plataforma na qual os candidatos e partidos podem criar perfis para apresentar suas propostas e objetivos, consequentemente facilitando a pesquisa do cidadão brasileiro na hora de decidir seu voto e permitindo um voto mais consciente.
+
+Atualmente essa plataforma se apresenta em período de desenvolvimento inicial e está sendo primariamente desenvolvida como o projeto final da disciplina de Desenvolvimento Web 1 do Bacharelado em Tecnologia da Informação - BTI UFRN/IMD.
+
+Esse site está sendo desenvolvido utilizando [Angular CLI](https://github.com/angular/angular-cli) versão 18.2.12 e [Bootstrap](https://getbootstrap.com) versão 5.3.3.
 
 ## Development server
 
