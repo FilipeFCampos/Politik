@@ -1,0 +1,39 @@
+#login-box{
+    border-radius: var(--Corner-Small, 8px);
+    background: #F0F8FF;
+}
+
+#login-text{
+    text-align: center;
+    justify-content: center;
+    font: bold;
+}
+
+#forms{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#whitespace{
+    height: 50px;
+}
+
+#text{
+    padding-left: 2px;
+}
+
+#need-margin{
+    margin-bottom: 10px;
+}
+
+#center-button{
+    display: flex;
+    justify-content: center;
+}
+
+#login-button{
+    height: 100%;
+    width: 50%;
+}

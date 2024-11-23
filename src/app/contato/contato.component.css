@@ -1,0 +1,54 @@
+textarea {
+    resize: none;
+}
+
+#contact{
+    margin-top: 150px;
+    margin-bottom: 75px;
+}
+
+#contact-box{
+    padding: 10px;
+    margin-bottom: 75px;
+    border-radius: 12px;
+    background: #F0F8FF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+#title-contact{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+#rows-contact{
+    margin: 20px;
+}
+
+#rows-contact-text{
+    margin: 20px;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    height: 100px;
+}
+
+#button-col{
+    display: flex;
+    justify-content: center;
+}
+
+#submit-button{
+    width: 150px;
+}
+
+@media screen and (max-width: 600px) {
+    #desktop-show {
+      display: none;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    #mobile-show {
+      display: none;
+    }
+}
