@@ -1,27 +1,57 @@
-# Politik
+![Politik](public/logo1.svg)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.12.
+*Transparência é a chave para o futuro*  
 
-## Development server
+---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Sobre o Projeto  
+**Politik** é uma plataforma web desenvolvida para centralizar informações eleitorais, oferecendo uma experiência acessível tanto para eleitores quanto para candidatos.  
 
-## Code scaffolding
+Nosso objetivo é simplificar o acesso a informações sobre candidatos e partidos políticos durante os períodos eleitorais no Brasil. Por meio de um modelo de benefício mútuo:  
+- **Para os candidatos**: uma ferramenta para criar perfis, expor suas propostas e objetivos.  
+- **Para os eleitores**: uma central organizada para pesquisas rápidas e decisões de voto mais conscientes.  
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Atualmente, **Politik** está em fase inicial de desenvolvimento, sendo o projeto final da disciplina *Desenvolvimento Web 1* do **Bacharelado em Tecnologia da Informação** - BTI (UFRN/IMD).  
 
-## Build
+<br>
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Tecnologias Utilizadas  
+### Frontend  
+- **[Angular CLI](https://angular.io/)** (versão 18.2.12)  
+  Framework robusto para a construção de aplicações web modernas.  
 
-## Running unit tests
+- **[Bootstrap](https://getbootstrap.com/)** (versão 5.3.3)  
+  Biblioteca para estilização e design responsivo.  
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Backend (Planejado)  
+- Ainda em definição. Possíveis escolhas incluem **Node.js**, **Django** ou **Spring Boot**.
 
-## Running end-to-end tests
+<br>
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Como Executar o Projeto Localmente  
+1. **Clone o Repositório**  
+   ```bash
+   git clone https://github.com/FilipeFCampos/Politik.git
+   cd Politik
+   ```  
 
-## Further help
+2. **Instale as Dependências**  
+   Certifique-se de que você tem o Node.js instalado. Em seguida:  
+   ```bash
+   npm install
+   ```  
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+3. **Execute o Projeto**  
+   ```bash
+   ng serve
+   ```  
+   O projeto estará disponível em: `http://localhost:4200/`.
+   
+<br>
+
+## Equipe
+
+| [<img src="https://avatars.githubusercontent.com/u/140771656?v=4" width=115><br><sub>André Lira</sub>](https://github.com/Aliragm) | [<img src="https://avatars.githubusercontent.com/u/79873886?v=4" width=115><br><sub>Filipe F. Campos</sub>](https://github.com/FilipeFCampos) | [<img src="https://avatars.githubusercontent.com/u/144023866?v=4" width=115><br><sub>Ulisses Damasceno</sub>](https://github.com/Ulissesdamasceno7) |
+| :---: | :---: | :---: |
+
+<br>
