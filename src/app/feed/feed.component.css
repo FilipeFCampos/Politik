@@ -9,3 +9,38 @@
 #separator{
     margin-bottom: 50px;
 }
+.card{
+    display: flex;
+    justify-content: center;
+}
+
+#cards{
+    display: flex;
+    justify-content: center;
+    margin-left: 20px;
+}
+
+#images-card{
+    height: 316px;
+    flex-shrink: 0;
+}
+
+
+#botao-card{
+    display: flex;
+    color: #FFF;
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    font-family: 'Roboto';
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    border-radius: 5px 5px var(--Corner-Small, 8px) var(--Corner-Small, 8px);
+    background: #014F23;
+    height: 120px;
+    weight: 90px;    
+    margin-bottom: 20px;
+}
