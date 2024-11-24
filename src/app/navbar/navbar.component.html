@@ -16,11 +16,18 @@
             </form>
         </div>
 
-        <!--Botão de ativação da sidebar-->
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
-            aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+        <div style="display: flex; gap: 20px; align-items: center;">
+            <!--Botão do modo alto contraste-->
+            <button class="botao-alto-contraste">
+                <img src="botao-alto-contraste.svg" alt="botao-alto-contraste">
+            </button>
+    
+            <!--Botão de ativação da sidebar-->
+            <button class="navbar-toggler" style="height: 50px;" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
+                aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
 
         <!--Sidebar-->
         <div class="offcanvas offcanvas-end offcanvas-style text-bg-dark" style="max-width: 300px;" tabindex="-1" id="offcanvasDarkNavbar"

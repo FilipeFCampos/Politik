@@ -13,6 +13,25 @@ nav {
     flex-shrink: 0;
 }
 
+.botao-alto-contraste {
+    background-color: transparent;
+    height: fit-content;
+    width: fit-content;
+    padding: 0px;
+    border: none;
+}
+
+.botao-alto-contraste img {
+    display: flex;
+    height: 50px;
+    aspect-ratio: 68/61;
+}
+
+.botao-alto-contraste img:hover {
+    transition-duration: 200ms;
+    filter: brightness(0.8);
+}
+
 .nav-item i {
     margin-right: 5px;
 }
