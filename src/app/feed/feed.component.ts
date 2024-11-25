@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './feed.component.html',
-  styleUrl: './feed.component.css'
+  styleUrl: './feed.component.scss'
 })
 export class FeedComponent {
 
