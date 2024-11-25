@@ -64,6 +64,14 @@ nav {
     font-size: larger;
 }
 
+#desktop-search-bar form input::placeholder {
+    color: var(--search-bar-text);
+}
+
+#desktop-search-bar form input {
+    background-color: var(--search-bar);
+}
+
 @media screen and (max-width: 600px) {
     #desktop-search-bar {
       display: none;
