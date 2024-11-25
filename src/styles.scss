@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+    font-family: 'Roboto', Arial, sans-serif;;
+}
+
+:root {
+    --blue-gradient90d: linear-gradient(90deg, #3820FD 65.5%, #211397 100%);
+    --blue-gradient180d: linear-gradient(180deg, #3820FD 0%, #211397 100%);
+    --green-gradient: linear-gradient(90deg, #009440 0%, #014F23 100%);
+    --alternative-text: #FFFF;
+    --floating-box: #F0F8FF
+    background-color: #FFFF;
+    color: #000
+
+}
+
+:root .alto-contraste {
+    --blue-gradient90d: linear-gradient(90deg, #00FFEA 65.5%, #00CED6 100%);
+    --blue-gradient180d: linear-gradient(180deg, #00FFEA 0%, #00CED6 100%);
+    --green-gradient: linear-gradient(90deg, #00FFEA 65.5%, #00CED6 100%);
+    --alternative-text: #000;
+    --floating-box: #202020;
+    background-color: #000;
+    color: #FFFF;
+}

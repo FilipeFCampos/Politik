@@ -5,7 +5,7 @@ import { Component, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './carousel.component.html',
-  styleUrls: ['./carousel.component.css'] ,
+  styleUrls: ['./carousel.component.scss'] ,
 })
 export class CarouselComponent implements AfterViewInit {
   list_text = [

@@ -1,9 +1,9 @@
 nav {
-    background: linear-gradient(90deg, #3820FD 65.5%, #211397 100%);
+    background: var(--blue-gradient90d);
 }
 
 .offcanvas-style {
-    background: linear-gradient(180deg, #3820FD 0%, #211397 100%);
+    background: var(--blue-gradient180d);
     display: flex;
 }
 
@@ -25,6 +25,14 @@ nav {
     display: flex;
     height: 50px;
     aspect-ratio: 68/61;
+}
+
+.item span {
+    color: var(--alternative-text);
+}
+
+.item i {
+    color: var(--alternative-text);
 }
 
 .botao-alto-contraste img:hover {
