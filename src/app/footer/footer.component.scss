@@ -2,12 +2,12 @@
     display: flex;
     position: relative;
     height: 22vh;
-    background: linear-gradient(90deg, #3820FD 65.5%, #211397 100%);
+    background: var(--blue-gradient90d);
     align-items: center;
 }
 
 .title {
-    color: #FFFF;
+    color: var(--alternative-text);
     text-align: left;
     font-family: 'Russo One', Arial, sans-serif;
     font-size: 40px;
@@ -17,7 +17,7 @@
 }
 
 .contatos p {
-    color: #FFFF;
+    color: var(--alternative-text);
     font-family: 'Roboto', Arial, sans-serif;
     font-size: 16px;
     font-style: normal;
@@ -32,7 +32,7 @@
 .redes-sociais {
     display: flex;
     gap: 15px;
-    color: #FFFF;
+    color: var(--alternative-text);
 }
 
 .redes-sociais a {

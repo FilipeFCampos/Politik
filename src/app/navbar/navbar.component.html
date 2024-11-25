@@ -4,7 +4,8 @@
     <div class="container-fluid">
         <!--Logo-->
         <a class="navbar-brand" href="#">
-            <img src="logo1.svg" alt="logo" class="logo">
+            <img src="icone.svg" alt="logo" class="logo">
+            <h1>Politik</h1>
         </a>
         <!--Barra de pesquisa desktop-->
         <div id="desktop-search-bar">
@@ -16,18 +17,25 @@
             </form>
         </div>
 
-        <!--Botão de ativação da sidebar-->
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
-            aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+        <div style="display: flex; gap: 20px; align-items: center;">
+            <!--Botão do modo alto contraste-->
+            <button class="botao-alto-contraste" (click)="toggle()">
+                <img src="botao-alto-contraste.svg" alt="botao-alto-contraste">
+            </button>
+    
+            <!--Botão de ativação da sidebar-->
+            <button class="navbar-toggler" style="height: 50px;" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
+                aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
 
         <!--Sidebar-->
         <div class="offcanvas offcanvas-end offcanvas-style text-bg-dark" style="max-width: 300px;" tabindex="-1" id="offcanvasDarkNavbar"
             aria-labelledby="offcanvasDarkNavbarLabel">
             <!--Título da sidebar-->
             <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Sidebar</h5>
+                <h5 class="offcanvas-title" style="color: var(--alternative-text);" id="offcanvasDarkNavbarLabel">Sidebar</h5>
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <!--Corpo da sidebar-->
@@ -45,7 +53,7 @@
                 <ul class="navbar-nav justify-content-end flex-grow-1 pe-3" style="margin-top: 10px;">
                     <!--Home-->
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" id="home" routerLink="/">
+                        <a class="nav-link active item" aria-current="page" id="home" routerLink="/">
                             @if (currentRoute === '/') {
                                 <i class="bi bi-house-fill"></i>
                                 <span style="font-weight: bold;">Home</span>   
@@ -58,7 +66,7 @@
                     </li>
                     <!--Feed-->
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" id="feed" routerLink="feed">
+                        <a class="nav-link active item" aria-current="page" id="feed" routerLink="feed">
                             @if (currentRoute === '/feed') {
                                 <i class="bi bi-grid-1x2-fill"></i>
                                 <span style="font-weight: bold;">Feed</span>   
@@ -71,7 +79,7 @@
                     </li>
                     <!--Contato-->
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" id="contato" routerLink="contato">
+                        <a class="nav-link active item" aria-current="page" id="contato" routerLink="contato">
                             @if (currentRoute === '/contato') {
                                 <i class="bi bi-chat-left-fill"></i>
                                 <span style="font-weight: bold;">Contato</span>   

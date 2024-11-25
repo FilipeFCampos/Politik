@@ -1,10 +1,10 @@
 #carousel-baixo{
     display: flex;
     border-radius: var(--Corner-Small, 8px);
-    background: linear-gradient(90deg, #009440 0%, #014F23 100%);
+    background: var(--green-gradient);
     padding-top: 20px;
     padding-bottom: 20px;
-    color: #FFF;
+    color: var(--alternative-text);
     justify-content: center;
     text-align: center;
     font-family: 'Roboto';
