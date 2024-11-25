@@ -11,9 +11,8 @@ import { AfterViewInit, Component, EventEmitter, ElementRef, Output, ViewChild }
 export class CadastroComponent implements AfterViewInit {
   
   @ViewChild('campoCPF') campoCPF!: ElementRef<HTMLInputElement>;
-  @ViewChild('campoCandidatoCNPJ') campoCandidatoCNPJ!: ElementRef<HTMLInputElement>;
   @ViewChild('campoCEP') campoCEP!: ElementRef<HTMLInputElement>;
-  @ViewChild('campoPartidoCNPJ') campoPartidoCNPJ!: ElementRef<HTMLInputElement>;
+  @ViewChild('campoCNPJ') campoCNPJ!: ElementRef<HTMLInputElement>;
 
   escopo?: string;
   nome?: string;
@@ -34,13 +33,6 @@ export class CadastroComponent implements AfterViewInit {
       formatCPF(tamanhoCampo, this.campoCPF);
     });
 
-    // Listener de formatação do CNPJ do candidato
-    this.campoCandidatoCNPJ.nativeElement.addEventListener('keypress', () => {
-      const tamanhoCampo = this.campoCandidatoCNPJ.nativeElement.value.length;
-
-      formatCNPJ(tamanhoCampo, this.campoCandidatoCNPJ);
-    });
-
     // Listener de formatação do CEP
     this.campoCEP.nativeElement.addEventListener('keypress', () => {
       const tamanhoCampo = this.campoCEP.nativeElement.value.length;
@@ -49,10 +41,10 @@ export class CadastroComponent implements AfterViewInit {
     });
     
     // Listener de formatação do CNPJ do partido
-    this.campoPartidoCNPJ.nativeElement.addEventListener('keypress', () => {
-      const tamanhoCampo = this.campoPartidoCNPJ.nativeElement.value.length;
+    this.campoCNPJ.nativeElement.addEventListener('keypress', () => {
+      const tamanhoCampo = this.campoCNPJ.nativeElement.value.length;
 
-      formatCNPJ(tamanhoCampo, this.campoPartidoCNPJ)
+      formatCNPJ(tamanhoCampo, this.campoCNPJ)
     });
   }
 }
