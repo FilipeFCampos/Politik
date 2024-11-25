@@ -15,7 +15,7 @@
 
 #botao-card{
     display: flex;
-    color: #FFF;
+    color: var(--alternative-text);
     text-align: center;
     justify-content: center;
     justify-items: center;
@@ -26,6 +26,6 @@
     font-weight: 700;
     line-height: 140%;
     border-radius: 0px 0px var(--Corner-Small, 8px) var(--Corner-Small, 8px);
-    background: #014F23;
+    background: var(--green-gradient);
     height: 150px;    
 }
