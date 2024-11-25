@@ -7,6 +7,25 @@ nav {
     display: flex;
 }
 
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand img {
+    height: 34.95px;
+    width: auto;
+}
+
+.navbar-brand h1 {
+    font-family: 'Russo One', 'Roboto', Arial, sans-serif;
+    margin: 0px;
+    font-size: 28px;
+    margin-top: 8px;
+    margin-left: 2px;
+    color: var(--alternative-text);
+}
+
 .logo {
     width: 150px;
     height: auto;
@@ -68,7 +87,15 @@ nav {
     color: var(--search-bar-text);
 }
 
+#mobile-search-bar form input::placeholder {
+    color: var(--search-bar-text);
+}
+
 #desktop-search-bar form input {
+    background-color: var(--search-bar);
+}
+
+#mobile-search-bar form input {
     background-color: var(--search-bar);
 }
 
