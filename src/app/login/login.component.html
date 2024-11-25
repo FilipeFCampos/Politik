@@ -1,53 +1,30 @@
-
-<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-backdrop="false" data-bs-backdrop="static">
+<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-bs-backdrop="static">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-body" id="login-box">
-            <div class="container-fluid">
-                <div class="row">
-                    <button type="button" class="btn-close btn-close-black" data-bs-dismiss="modal" aria-label="Close" id="close-button"></button>
-                </div>
-                <div class="row" id="login-text">
-                    <h1>LOGIN</h1>
-                </div>
-                <div class="row">
-                    <div class="col-2"></div>
-                    <div class="col-8" id="forms">
-                        <input type="text" class="form-control" placeholder="Email" aria-label="Example text with button addon" aria-describedby="button-addon1">
-                    </div>
-                    <div class="col-2"></div>
-                </div>
-                <div class="row">
-                    <div class="col-2"></div>
-                    <div class="col-8" id="forms">
-                        <input type="password" class="form-control" placeholder="Senha" aria-label="Example text with button addon" aria-describedby="button-addon1">
-                    </div>
-                    <div class="col-2"></div>
-                </div>
-                <div class="row">
-                    <div class="col-2"></div>
-                    <div class="col-8">
-                        <a href="" id="text">Esqueci minha Senha</a> 
-                    </div>
-                    <div class="col-2"></div>
-                </div>
-                <div class="row" id="whitespace"></div>
-                <div class="row">
-                    <div class="col-2"></div>
-                    <div class="col-8" id="need-margin">
-                        <p id="text">Não possui conta?</p>
-                        <a routerLink="cadastro" data-bs-dismiss="modal" id="text">Solicite seu cadastro</a> 
-                    </div>
-                    <div class="col-2"></div>
-                </div>
-                <div class="row">
-                    <div class="col-2"></div>
-                    <div class="col-8" id="center-button">
-                        <button type="button" class="btn btn-warning" id="login-button">Entrar</button>
-                    </div>
-                    <div class="col-2"></div>
-                </div>
-            </div>
+          <button type="button" class="btn-close btn-close-black" data-bs-dismiss="modal" aria-label="Close" id="close-button"></button>
+          <div id="login-text">
+            <h1>LOGIN</h1>
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Email">
+          </div>
+          <div class="mb-3">
+            <input type="password" class="form-control" placeholder="Senha">
+          </div>
+          <div class="text-center">
+            <a href="#" id="text">Esqueci minha Senha</a>
+          </div>
+          <div id="whitespace"></div>
+          <div class="text-center mb-3">
+            <p id="text">Não possui conta?</p>
+            <a routerLink="cadastro" data-bs-dismiss="modal" id="text">Solicite seu cadastro</a>
+          </div>
+          <div class="text-center">
+            <button type="button" class="btn btn-warning w-100" id="login-button">Entrar</button>
+          </div>
         </div>
+      </div>
     </div>
   </div>
+  
