@@ -9,7 +9,7 @@
 }
 
 #images-card{
-    height: 316px;
+    height: 300px;
     flex-shrink: 0;
 }
 
@@ -21,11 +21,11 @@
     justify-items: center;
     align-items: center;
     font-family: 'Roboto';
-    font-size: 46px;
+    font-size: 38px;
     font-style: normal;
     font-weight: 700;
     line-height: 140%;
     border-radius: 0px 0px var(--Corner-Small, 8px) var(--Corner-Small, 8px);
     background: var(--green-gradient);
-    height: 150px;    
+    height: 120px;    
 }
