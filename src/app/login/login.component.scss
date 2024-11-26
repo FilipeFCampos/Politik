@@ -1,39 +1,29 @@
-#login-box{
-    border-radius: var(--Corner-Small, 8px);
+.modal-dialog {
+    max-width: 350px; /* Define a largura máxima */
+    margin: auto;
+  }
+  
+  #login-box {
+    border-radius: 8px;
     background: var(--floating-box);
-}
-
-#login-text{
+    padding: 20px; /* Espaçamento interno */
+  }
+  
+  #login-text h1 {
     text-align: center;
-    justify-content: center;
-    font: bold;
-}
-
-#forms{
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-#whitespace{
-    height: 50px;
-}
-
-#text{
-    padding-left: 2px;
-}
-
-#need-margin{
-    margin-bottom: 10px;
-}
-
-#center-button{
-    display: flex;
-    justify-content: center;
-}
-
-#login-button{
-    height: 100%;
-    width: 50%;
-}
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  #whitespace {
+    height: 20px; /* Reduzi o espaçamento vertical */
+  }
+  
+  #text {
+    margin: 5px 0;
+  }
+  
+  #login-button {
+    width: 100%; /* Botão ocupa toda a largura */
+  }
+  
