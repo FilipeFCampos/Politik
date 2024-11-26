@@ -28,6 +28,10 @@
     margin-bottom: 40px; 
 }
 
+#feed-text{
+    color: var(--alternative-text);
+}
+
 #images-card {
     height: 280px;
     width: 100%;    
@@ -57,5 +61,5 @@
 #botao-card p {
     font-size: 18px;
     margin: 0; 
-    color: yellow;
+    color: var(--yellow-feed);
 }
