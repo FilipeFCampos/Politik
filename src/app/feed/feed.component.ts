@@ -4,7 +4,7 @@ import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-feed',
   standalone: true,
-  imports: [RouterLink],
+  imports: [ RouterLink ],
   templateUrl: './feed.component.html',
   styleUrls: ['./feed.component.scss']
 })

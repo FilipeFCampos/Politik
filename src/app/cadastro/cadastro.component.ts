@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, EventEmitter, ElementRef, Output, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-cadastro',

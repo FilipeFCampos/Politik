@@ -27,7 +27,7 @@ export const routes: Routes = [
         title: 'Feed'
     },
     {
-        path: 'candidato',
+        path: 'feed/candidato',
         component: CandidatoComponent,
         title: 'Candidato'
     },
