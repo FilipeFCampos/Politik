@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-feed',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './feed.component.html',
   styleUrls: ['./feed.component.scss']
 })
