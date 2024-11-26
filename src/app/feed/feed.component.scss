@@ -17,17 +17,20 @@
     border-top-right-radius: 10px; 
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
+    width: 250px;
 }
 
 #cards {
     display: flex;
+    align-items: center;
     justify-content: center;
     /*margin-left: 20px;*/
     margin-bottom: 40px; 
 }
 
 #images-card {
-    height: 300px;    
+    height: 280px;
+    width: 100%;    
 }
 
 #botao-card {
@@ -39,6 +42,11 @@
     background: var(--green-gradient);
     height: 100px;
     
+}
+
+#alignment{
+    display: flex;
+    justify-content: center;
 }
 
 #botao-card h1 {
