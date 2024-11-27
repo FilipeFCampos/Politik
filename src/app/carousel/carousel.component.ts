@@ -5,16 +5,18 @@ import { Component, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './carousel.component.html',
-  styleUrls: ['./carousel.component.scss'] ,
+  styleUrls: ['./carousel.component.scss'],
 })
 export class CarouselComponent implements AfterViewInit {
+
   list_text = [
-    "Some representative placeholder content for the first slide.",
-    "Some representative placeholder content for the second slide.",
-    "Some representative placeholder content for the third slide.",
+    { description: "De olho na eleição", link: "https://www.tse.jus.br/eleicoes/calendario-eleitoral/calendario-eleitoral" },
+    { description: "Confira nossas redes sociais!", link: "#" },
+    { description: "Faça uma doação!", link: "#" },
   ];
 
   @ViewChild('description') description!: ElementRef<HTMLParagraphElement>;
+  @ViewChild('descriptionLink') descriptionLink!: ElementRef<HTMLAnchorElement>;
   @ViewChild('carousel') carousel!: ElementRef<HTMLElement>;
 
   ngAfterViewInit(): void {
@@ -22,7 +24,8 @@ export class CarouselComponent implements AfterViewInit {
 
     carouselElement.addEventListener('slide.bs.carousel', (event: any) => {
       const index = event.to;
-      this.description.nativeElement.innerHTML = this.list_text[index];
+      this.description.nativeElement.innerText = this.list_text[index].description;
+      this.descriptionLink.nativeElement.href = this.list_text[index].link;
     });
   }
 }
