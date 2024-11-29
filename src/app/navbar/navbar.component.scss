@@ -70,17 +70,50 @@ nav {
 .nav-item a:hover {
     color: darkgray;
 }
+ 
+@media (min-width: 1001px){
+    #login {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        bottom: 8.5%;
+        left: 101.635px;
+    }
 
-#login {
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    bottom: 8.5%;
-    left: 101.635px;
+    #login button {
+        font-size: larger;
+    }
+
+    #login-substituto{
+        display: none;
+    }
+
+    #texto-login-substituto{
+        display: none;
+    }
 }
 
-#login button {
-    font-size: larger;
+@media (max-width: 1000px){
+    #login{
+        display: none;
+    }
+
+    #login button{
+        display: none;
+    }
+
+    #login-substituto{
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        bottom: 8.5%;
+        left: 50px;
+    }
+
+    #texto-login-substituto{
+        text-align: center;
+        font-weight: bold;
+    }
 }
 
 #desktop-search-bar form input::placeholder {
