@@ -1,79 +1,110 @@
-#texto-importante{
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 700;
-}
-
-#texto-descritivo{
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-}
-
-#imagem-candidato{
-    border-radius: 279px;
-    width: 279px;
-    height: 279px;
-}
-
-#partido-num{
-    margin-left: 20px;
-}
-
-#partido{
-    margin-left: 15px;
-}
-
-#numero{
-    margin-left: 38px;
-}
-
 #linha-1 {
-    display: flex;
-    justify-content: center;
-    background-color: var( --floating-box);
-    padding: 20px;
-    margin-top: 120px;
-    margin-right: 100px;
-    margin-left: 100px;
-    border-radius: 12px;
-    filter: drop-shadow(0px 4px 4px var(--shadow));
-    
-}
+    margin-top: 80px;  /* Aumenta o espaçamento no topo */
+  }  
 
-#linha-2 {
+#texto-importante {
+    font-size: 32px;
+    font-weight: 700;
+  }
+  
+  #texto-descritivo {
+    font-size: 20px;
+    font-weight: 400;
+  }
+  
+  #imagem-candidato {
+    border-radius: 50%;
+    width: 100%;
+    max-width: 279px;
+    height: auto;
+  }
+  
+  #partido-num {
+    margin-left: 20px;
+  }
+  
+  #partido {
+    margin-left: 15px;
+  }
+  
+  #numero {
+    margin-left: 38px;
+  }
+  
+  .row {
+    margin: 0;
+    padding: 0;
+  }
+
+  .col-4{
+    padding-top: 50px;
+  }
+
+  .col{
+    margin-bottom: 8px;
+  }
+
+  #linha-1, #linha-2, #linha-3, #linha-4 {
     display: flex;
     justify-content: center;
     background-color: var(--floating-box);
     padding: 20px;
-    margin-top: 20px;
-    margin-right: 100px;
-    margin-left: 100px;
+    margin: 20px 10%;
     border-radius: 12px;
     filter: drop-shadow(0px 4px 4px var(--shadow));
-}
-
-#linha-3 {
-    display: flex;
-    justify-content: center;
-    background-color: var(--floating-box);
-    padding: 20px;
-    margin-top: 20px;
-    margin-right: 100px;
-    margin-left: 100px;
-    border-radius: 12px;
-    filter: drop-shadow(0px 4px 4px var(--shadow));
-}
-
-#linha-4 {
-    display: flex;
-    justify-content: center;
-    background-color:var(--floating-box);
-    padding: 20px;
-    margin-top: 20px;
-    margin-bottom: 60px;
-    margin-right: 100px;
-    margin-left: 100px;
-    border-radius: 12px;
-    filter: drop-shadow(0px 4px 4px var(--shadow));
-}
+  }
+  
+  #linha-1 {
+    margin-top: 40px;
+  }
+  
+  @media (max-width: 992px) {
+    #linha-1 {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    #linha-1 .col-4 {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    #partido-num {
+      margin-left: 0;
+    }
+  
+    #imagem-candidato {
+      max-width: 200px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    #linha-2, #linha-3, #linha-4 {
+      margin: 20px 5%;
+    }
+  
+    #texto-importante {
+      font-size: 24px;
+    }
+  
+    #texto-descritivo {
+      font-size: 16px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #linha-1, #linha-2, #linha-3, #linha-4 {
+      margin: 10px 2%;
+      padding: 15px;
+    }
+  
+    #texto-importante {
+      font-size: 20px;
+    }
+  
+    #texto-descritivo {
+      font-size: 14px;
+    }
+  }
+  
