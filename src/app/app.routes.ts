@@ -4,6 +4,7 @@ import { CadastroComponent } from './cadastro/cadastro.component';
 import { ContatoComponent } from './contato/contato.component';
 import { FeedComponent } from './feed/feed.component';
 import { CandidatoComponent } from './candidato/candidato.component';
+import { EditarComponent } from './editar/editar.component';
 
 export const routes: Routes = [
     {
@@ -30,5 +31,10 @@ export const routes: Routes = [
         path: 'feed/candidato',
         component: CandidatoComponent,
         title: 'Candidato'
+    },
+    {
+        path: 'feed/candidato/editar',
+        component: EditarComponent,
+        title: 'Editar candidato'
     },
 ];

@@ -1,30 +1,29 @@
 <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-bs-backdrop="static">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-body" id="login-box">
-          <button type="button" class="btn-close btn-close-black" data-bs-dismiss="modal" aria-label="Close" id="close-button"></button>
-          <div id="login-text">
-            <h1>LOGIN</h1>
-          </div>
-          <div class="mb-3">
-            <input type="text" class="form-control" placeholder="Email">
-          </div>
-          <div class="mb-3">
-            <input type="password" class="form-control" placeholder="Senha">
-          </div>
-          <div class="text-center">
-            <a href="#" id="text">Esqueci minha Senha</a>
-          </div>
-          <div id="whitespace"></div>
-          <div class="text-center mb-3">
-            <p id="text">Não possui conta?</p>
-            <a routerLink="cadastro" data-bs-dismiss="modal" id="text">Solicite seu cadastro</a>
-          </div>
-          <div class="text-center">
-            <button type="button" class="btn btn-warning w-100" id="login-button">Entrar</button>
-          </div>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body" id="login-box">
+        <button type="button" class="btn-close btn-close-black" data-bs-dismiss="modal" aria-label="Close" id="close-button"></button>
+        <div id="login-text" class="text-center">
+          <h1>LOGIN</h1>
+        </div>
+        <div class="mb-3">
+          <input type="text" class="form-control" placeholder="Email" [(ngModel)]="login">
+        </div>
+        <div class="mb-3">
+          <input type="password" class="form-control" placeholder="Senha" [(ngModel)]="password">
+        </div>
+        <div class="text-center">
+          <a href="#" id="text">Esqueci minha Senha</a>
+        </div>
+        <div id="whitespace"></div>
+        <div class="text-center mb-3">
+          <p id="text">Não possui conta?</p>
+          <a routerLink="cadastro" data-bs-dismiss="modal" id="text">Solicite seu cadastro</a>
+        </div>
+        <div class="text-center">
+          <button type="button" class="btn btn-warning w-100" (click)="onSubmit()">Entrar</button>
         </div>
       </div>
     </div>
   </div>
-  
+</div>

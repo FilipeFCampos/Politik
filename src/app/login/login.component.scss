@@ -1,12 +1,12 @@
 .modal-dialog {
-    max-width: 350px; /* Define a largura máxima */
+    max-width: 350px;
     margin: auto;
   }
   
   #login-box {
     border-radius: 8px;
     background: var(--floating-box);
-    padding: 20px; /* Espaçamento interno */
+    padding: 20px;
   }
   
   #login-text h1 {
@@ -16,7 +16,7 @@
   }
   
   #whitespace {
-    height: 20px; /* Reduzi o espaçamento vertical */
+    height: 20px;
   }
   
   #text {
@@ -24,6 +24,6 @@
   }
   
   #login-button {
-    width: 100%; /* Botão ocupa toda a largura */
+    width: 100%;
   }
   
