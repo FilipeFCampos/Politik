@@ -1,18 +1,19 @@
 #carousel-baixo{
     display: flex;
-    border-radius: var(--Corner-Small, 8px);
+    border-bottom-left-radius: var(--Corner-Small, 8px);
+    border-bottom-right-radius: var(--Corner-Small, 8px);
     background: var(--green-gradient);
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 1.042vw;
+    padding-bottom: 1.042vw;
     color: var(--alternative-text);
     justify-content: center;
     text-align: center;
     font-family: 'Roboto';
-    font-size: 28px;
+    font-size: 1.458vw;
     font-style: normal;
     font-weight: 600;
     /*line-height: normal;*/
-    height: 80px;
+    height: 4.167vw;
 }
 
 #link-carousel{
@@ -21,6 +22,18 @@
 }
 
 #images-carousel{
-    width: 450px;
-    height: 450px;
+    border-radius: 8px 8px 0px 0px;
+    overflow: hidden;
+}
+
+#carouselExampleCaptions {
+    display: flex;
+    flex-direction: column;
+    height: 31.51vw;
+    width: 61.458vw;
+    aspect-ratio: 61.458vw / 31.51vw;
+}
+
+@media (max-width: 600px) {
+    
 }

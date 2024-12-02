@@ -11,9 +11,20 @@
 }
 
 #imagem-candidato{
-    border-radius: 279px;
     width: 279px;
     height: 279px;
+    flex-shrink: 0;
+    border-radius: 279px;
+    border: 2px solid #505050;
+    background: url(../../../public/images/candidato-generico.png) lightgray 50% / cover no-repeat;
+}
+
+#fundo {
+    width: 1105px;
+    height: 271px;
+    flex-shrink: 0;
+    border-radius: 12px 12px 0px 0px;
+    background: url(../../../public/images/fundo1.png) lightgray 50% / cover no-repeat;
 }
 
 #partido-num{
