@@ -66,3 +66,9 @@
     margin: 0; 
     color: var(--yellow-feed);
 }
+
+@media (max-width: 600px) {
+    .card {
+        padding-top: 20px;
+    }
+}
