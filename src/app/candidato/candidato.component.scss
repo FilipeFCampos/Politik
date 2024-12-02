@@ -11,13 +11,45 @@
 }
 
 #imagem-candidato{
+    border-radius: 279px;
     width: 279px;
     height: 279px;
-    flex-shrink: 0;
-    border-radius: 279px;
-    border: 2px solid #505050;
-    background: url(../../../public/images/candidato-generico.png) lightgray 50% / cover no-repeat;
 }
+
+/* Imagem de perfil */
+.profile-image {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border: 2px solid #dcdcdc;
+}
+
+/* Logo do partido */
+.party-logo {
+    width: 60px;
+    height: auto;
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 768px) {
+    .card .row {
+        text-align: center;
+    }
+
+    .profile-image {
+        width: 150px;
+        height: 150px;
+    }
+
+    .text-md-start, .text-md-end {
+        text-align: center !important;
+    }
+
+    .party-logo {
+        margin-top: 10px;
+    }
+}
+
 
 #fundo {
     width: 1105px;
