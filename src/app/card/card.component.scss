@@ -1,6 +1,7 @@
 .card{
     display: flex;
     justify-content: center;
+    border: none;
 }
 
 #cards{
@@ -18,6 +19,7 @@
     color: var(--alternative-text);
     text-align: center;
     justify-content: center;
+    border: none;
     justify-items: center;
     align-items: center;
     font-family: 'Roboto';
