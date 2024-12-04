@@ -1,4 +1,4 @@
-<form>
+<form id="desktop-show">
     <div class="container-fluid">
         <div class="row">
             <div class="col-2"></div>
@@ -52,6 +52,62 @@
                 </div>
             </div>
             <div class="col-2"></div>
+        </div>
+    </div>
+</form>
+
+<form id="mobile-show">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12" id="contact">
+                <div class="container-fluid" id="contact-box">
+                    <h1 id="title-contact">Entre em contato!</h1>
+                    <!-----Parte desktop------>
+                    <div id="desktop-show">
+                        <div class="row" id="rows-contact">
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="Seu nome..."
+                                    aria-label="Example text with button addon" aria-describedby="button-addon1" required>
+                            </div>
+                            <div class="col">
+                                <input type="email" class="form-control" placeholder="Seu Email..."
+                                    aria-label="Example text with button addon" aria-describedby="button-addon1" required>
+                            </div>
+                        </div>
+                    </div>
+                    <!-----Parte mobile------>
+                    <div id="mobile-show">
+                        <div class="row" id="rows-contact">
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="Seu nome..."
+                                    aria-label="Example text with button addon" aria-describedby="button-addon1" required>
+                            </div>
+                        </div>
+                        <div class="row" id="rows-contact">
+                            <div class="col">
+                                <input type="email" class="form-control" placeholder="Seu Email..."
+                                    aria-label="Example text with button addon" aria-describedby="button-addon1" required>
+                            </div>
+                        </div>
+                    </div>
+                    <!-----Resto----->
+                    <div class="row" id="rows-contact">
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="Assunto..."
+                                aria-label="Example text with button addon" aria-describedby="button-addon1" required>
+                        </div>
+                    </div>
+                    <div class="row" id="rows-contact-text">
+                        <textarea class="form-control" aria-label="With textarea" placeholder="Escreva sua mensagem..."
+                            id="text-area"></textarea>
+                    </div>
+                    <div class="row">
+                        <div class="col" id="button-col">
+                            <button type="submit" class="btn btn-warning" id="submit-button">Enviar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </form>
