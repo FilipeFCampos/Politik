@@ -76,7 +76,7 @@ nav {
     justify-content: center;
     position: absolute;
     bottom: 8.5%;
-    left: 101.635px;
+    left: 90px;
 }
 
 #login button {
@@ -103,10 +103,26 @@ nav {
     #desktop-search-bar {
       display: none;
     }
+
+    #desktop-login{
+        display: none;
+    }
+
+    #text-mobile{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        margin-right: 101.635px;
+        font-size: 12px;
+    }
 }
 
 @media screen and (min-width: 600px) {
     #mobile-search-bar {
       display: none;
+    }
+
+    #text-mobile{
+        display: none;
     }
 }

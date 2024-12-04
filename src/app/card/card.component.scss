@@ -31,3 +31,18 @@
     background: var(--green-gradient);
     height: 120px;    
 }
+
+@media screen and (max-width: 600px) {
+    #card-cadastro{
+        display: none;
+    }
+
+    .card{
+        display: flex;
+        justify-content: center;
+        border: none;
+        margin-top: 20px;
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+}

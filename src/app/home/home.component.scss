@@ -1,6 +1,8 @@
 #carousel{
+    display: flex;
     margin-top: 150px;
     margin-bottom: 75px;
+    justify-content: center;
 }
 
 #card{
@@ -24,4 +26,16 @@
 #titulo-sobre{
     font-family: 'Russo One';
     margin-top: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    #desktop{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    #mobile {
+      display: none;
+    }
 }
