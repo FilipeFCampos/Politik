@@ -86,6 +86,11 @@
     top: 12px;
 }
 
+.card-mobile :hover {
+    transition-duration: 100ms;
+    filter: brightness(0.8);
+}
+
 .mobile {
     display: none;
 }
@@ -118,6 +123,10 @@
     position: relative;
     left: 132px;
     font-weight: 700;
+}
+
+.mobile a {
+    text-decoration: none;
 }
 
 @media (max-width: 600px) {
