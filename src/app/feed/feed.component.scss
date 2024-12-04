@@ -67,8 +67,74 @@
     color: var(--yellow-feed);
 }
 
+.card-mobile {
+    width: 342px;
+    height: 134px;
+    flex-shrink: 0;
+    background: var(--green-gradient);
+    border-radius: 12px;
+}
+
+.card-mobile img {
+    width: 112px;
+    height: 112px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    display: flex;
+    position: relative;
+    left: 12px;
+    top: 12px;
+}
+
+.mobile {
+    display: none;
+}
+
+.mobile h1 {
+    color: var(--alternative-text);
+    text-align: center;
+    font-family: Roboto;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    position: relative;
+    left: 132px;
+    width: 200px;
+    height: 48px;
+    bottom: 76px;
+    margin: 0px
+}
+
+.mobile p {
+    color: var(--yellow-feed);
+    text-align: center;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    width: 200px;
+    height: 48px;
+    margin: 0px;
+    bottom: 78px;
+    position: relative;
+    left: 132px;
+    font-weight: 700;
+}
+
 @media (max-width: 600px) {
     .card {
         padding-top: 20px;
+    }
+    .desktop {
+        display: none;
+    }
+    .mobile {
+        display:flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+    #title {
+        padding: 0px;
     }
 }
