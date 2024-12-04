@@ -11,7 +11,10 @@ Nosso objetivo é simplificar o acesso a informações sobre candidatos e partid
 - **Para os candidatos**: uma ferramenta para criar perfis, expor suas propostas e objetivos.  
 - **Para os eleitores**: uma central organizada para pesquisas rápidas e decisões de voto mais conscientes.  
 
-Atualmente, **Politik** está em fase inicial de desenvolvimento, sendo o projeto final da disciplina *Desenvolvimento Web 1* do **Bacharelado em Tecnologia da Informação** - BTI (UFRN/IMD).  
+Atualmente, **Politik** está em fase inicial de desenvolvimento, sendo o projeto final da disciplina *Desenvolvimento Web 1* do **Bacharelado em Tecnologia da Informação** - BTI (UFRN/IMD). 
+
+O website está sendo hospedado atualmente por meio do github pages e pode ser acessado por meio do endereço a seguir:
+- https://filipefcampos.github.io/Politik/
 
 <br>
 
