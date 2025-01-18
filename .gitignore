@@ -42,3 +42,7 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+# Cache
+/backend/api/__pycache__
+/backend/backend/__pycache__
