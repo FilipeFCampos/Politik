@@ -44,5 +44,4 @@ testem.log
 Thumbs.db
 
 # Cache
-/backend/api/__pycache__
-/backend/backend/__pycache__
+*pyc
