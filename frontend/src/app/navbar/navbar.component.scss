@@ -110,3 +110,24 @@ nav {
       display: none;
     }
 }
+
+.dropdown-menu {
+    background-color: var(--search-bar);
+    border: 1px solid #ccc;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 300px;
+    overflow-y: auto;
+    z-index: 1050;
+  }
+  
+  .dropdown-item {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #f8f9fa;
+  }
+  

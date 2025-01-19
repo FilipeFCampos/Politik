@@ -8,6 +8,7 @@
 
 # Node
 /node_modules
+/frontend/node_modules
 npm-debug.log
 yarn-error.log
 
@@ -30,6 +31,7 @@ yarn-error.log
 
 # Miscellaneous
 /.angular/cache
+/frontend/.angular/cache
 .sass-cache/
 /connect.lock
 /coverage
@@ -40,3 +42,6 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+# Cache
+*pyc
