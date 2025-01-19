@@ -45,3 +45,5 @@ Thumbs.db
 
 # Cache
 *.pyc
+
+*.sqlite3
