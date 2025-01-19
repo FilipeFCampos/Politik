@@ -3,6 +3,7 @@ from django.db import models
 class Candidato(models.Model):
     nome = models.CharField(max_length=50)
     cargo = models.CharField(max_length=50)
+    numero = models.IntegerField(max_length=5)
     partido = models.CharField(max_length=50)
     cidade = models.CharField(max_length=50)
     estado = models.CharField(max_length=2)
