@@ -9,12 +9,20 @@
         </a>
         <!--Barra de pesquisa desktop-->
         <div id="desktop-search-bar">
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <form class="d-flex" role="search" (ngSubmit)="onSearch()">
+                <input
+                  class="form-control me-2"
+                  type="search"
+                  placeholder="Search"
+                  aria-label="Search"
+                  [(ngModel)]="searchTerm"
+                  name="search"
+                  required
+                />
                 <button class="btn btn-success" type="submit">
-                    <i class="bi bi-search"></i>
+                  <i class="bi bi-search"></i>
                 </button>
-            </form>
+              </form>              
         </div>
 
         <div style="display: flex; gap: 20px; align-items: center;">
@@ -42,13 +50,31 @@
             <div class="offcanvas-body">
                 <!--Barra de pesquisa mobile-->
                 <div id="mobile-search-bar">
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <form class="d-flex" role="search" (ngSubmit)="onSearch()">
+                        <input
+                          class="form-control me-2"
+                          type="search"
+                          placeholder="Search"
+                          aria-label="Search"
+                          [(ngModel)]="searchTerm"
+                          name="search"
+                          required
+                        />
                         <button class="btn btn-success" type="submit">
-                            <i class="bi bi-search"></i>
+                          <i class="bi bi-search"></i>
                         </button>
-                    </form>
+                      </form>                      
                 </div>
+                <ul
+                *ngIf="searchResults.length > 0"
+                class="dropdown-menu show"
+                style="position: absolute; top: 50px; left: 0; right: auto;"
+                >
+                <li *ngFor="let candidato of searchResults" class="dropdown-item">
+                    {{ candidato.nome }} - {{ candidato.partido }}
+                </li>
+                </ul>
+
                 <!--Links-->
                 <ul class="navbar-nav justify-content-end flex-grow-1 pe-3" style="margin-top: 10px;">
                     <!--Home-->
