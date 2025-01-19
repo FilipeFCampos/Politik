@@ -1,4 +1,4 @@
-![Politik](frontend/public/logo1.svg)
+![Politik](public/logo1.svg)
 
 *Transparência é a chave para o futuro*  
 
