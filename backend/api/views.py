@@ -49,6 +49,7 @@ def submit_form(request):
             nascimento=data.get('nascimento'),
             email=data.get('email'),
             cpf=data.get('CPF'),
+            cpf=data.get('CPF'),
             endereco=data.get('endereço'),
             cidade=data.get('cidade'),
             bairro=data.get('bairro'),
@@ -65,6 +66,15 @@ def submit_form(request):
             documento_aplicacao=files.get('documento-aplicacao'),
         )
         submission.save()
+        return JsonResponse({"message": "Form submitted successfully!"}, status=201)
+
+    return JsonResponse({"error": "Invalid request method"}, status=400)
+
+import json
+'''
+@csrf_exempt
+def submit_form(request):
+    if request.method == "POST":
         data = request.POST.dict()
         files = request.FILES.dict()
         all_data = {**data, **{key: str(value) for key, value in files.items()}}
@@ -74,4 +84,4 @@ def submit_form(request):
         send_email()
         return HttpResponseRedirect('http://localhost:4200/cadastro')
 
-    return JsonResponse({"error": "Invalid request method"}, status=400)
+    return JsonResponse({"error": "Invalid request method"}, status=400)'''
