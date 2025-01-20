@@ -5,12 +5,12 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root',
 })
-export class ApiService {
-  private baseUrl = 'http://127.0.0.1:8000/api/';
+export class CadastroService {
+  private baseUrl = 'http://127.0.0.1:8000/api/submit-form/';
 
   constructor(private http: HttpClient) {}
 
-  getExample(): Observable<any> {
-    return this.http.get(`${this.baseUrl}submit-form/`);
+  searchCandidatos(term: string): Observable<any[]> {
+    return this.http.get<any[]>(this.baseUrl);
   }
 }
