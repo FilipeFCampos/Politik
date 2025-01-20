@@ -17,6 +17,10 @@ export class CadastroComponent implements AfterViewInit {
     'RS', 'RO', 'RR', 'SC', 'SP', 'SE', 'TO',
   ];
 
+  onclick() {
+    alert('Formulário enviado com sucesso!!');
+  }
+
   @ViewChild('campoCPF') campoCPF!: ElementRef<HTMLInputElement>;
   @ViewChild('campoCEP') campoCEP!: ElementRef<HTMLInputElement>;
   @ViewChild('campoCNPJ') campoCNPJ!: ElementRef<HTMLInputElement>;

@@ -11,13 +11,36 @@ class CandidatoViewSet(ModelViewSet):
     search_fields = ['nome', 'partido', 'cidade', 'estado', 'numero']
     
 from django.views.decorators.csrf import csrf_exempt
-from django.http import JsonResponse
+from django.http import JsonResponse, HttpResponseRedirect
 from django.core.files.storage import default_storage
 from .models import FormSubmission
+from .utils import send_attachments
+from django.conf import settings
+import os
+import json
 
-@csrf_exempt  # Temporarily disable CSRF protection for testing (remove in production)
+def send_email():
+    subject = "Aplicação de candidato Politik"
+    message = "Teste"
+    recipient_list = ["filipe.campos.127@ufrn.edu.br"]
+    json_path = f"{settings.BASE_DIR}/form_data.json"
+    attachments_path = f"{settings.BASE_DIR}/uploads/"
+    
+    attachments = []
+    for file in os.listdir(attachments_path):
+        attachments.append(file)
+    
+    send_attachments(subject, message, recipient_list, json_path, attachments)
+    
+def delete_files():
+    target = f"{settings.BASE_DIR}/uploads/"
+    for file in os.listdir(target):
+        os.unlink(target + file)
+
+@csrf_exempt
 def submit_form(request):
     if request.method == "POST":
+        delete_files()
         data = request.POST
         files = request.FILES
         submission = FormSubmission(
@@ -41,20 +64,13 @@ def submit_form(request):
             documento_aplicacao=files.get('documento-aplicacao'),
         )
         submission.save()
-        return JsonResponse({"message": "Form submitted successfully!"}, status=201)
-
-    return JsonResponse({"error": "Invalid request method"}, status=400)
-
-import json
-'''
-@csrf_exempt
-def submit_form(request):
-    if request.method == "POST":
         data = request.POST.dict()
         files = request.FILES.dict()
         all_data = {**data, **{key: str(value) for key, value in files.items()}}
         with open('form_data.json', 'w') as json_file:
-            json.dump(all_data, json_file)
-        return JsonResponse({"message": "Form submitted and saved as JSON!"}, status=201)
+            json.dump(all_data, json_file, indent=2)
+        
+        send_email()
+        return HttpResponseRedirect('http://localhost:4200/cadastro')
 
-    return JsonResponse({"error": "Invalid request method"}, status=400)'''
+    return JsonResponse({"error": "Invalid request method"}, status=400)
