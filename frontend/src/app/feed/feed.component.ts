@@ -41,6 +41,6 @@ export class FeedComponent implements OnInit{
       groups.push(candidates.slice(i, i + groupSize));
     }
     return groups;
-  }
+  } 
   
 }

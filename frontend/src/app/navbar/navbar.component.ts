@@ -34,7 +34,9 @@ export class NavbarComponent implements OnInit {
   onSearch(): void {
     if (this.searchTerm.trim()) {
       this.dataService.changeData(this.searchTerm);
-      this.router.navigate(['/feed']);
+      if (this.currentRoute !== '/feed') {
+        this.router.navigate(['/feed']);
+      }
     }
   }
 
