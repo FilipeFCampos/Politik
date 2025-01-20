@@ -14,9 +14,20 @@ from django.views.decorators.csrf import csrf_exempt
 from django.http import JsonResponse
 from django.core.files.storage import default_storage
 from .models import FormSubmission
+from .utils import send_attachments
+from django.conf import settings
 import json
 
-@csrf_exempt  # Temporarily disable CSRF protection for testing (remove in production)
+def send_email(attachments):
+    subject = "Aplicação de candidato Politik"
+    message = "Teste"
+    recipient_list = ["filipe.campos.127@ufrn.edu.br"]
+    json_path = f"{settings.BASE_DIR}/form_data.json"
+    
+    send_attachments(subject, message, recipient_list, json_path, attachments)
+
+
+@csrf_exempt
 def submit_form(request):
     if request.method == "POST":
         data = request.POST
@@ -46,7 +57,9 @@ def submit_form(request):
         files = request.FILES.dict()
         all_data = {**data, **{key: str(value) for key, value in files.items()}}
         with open('form_data.json', 'w') as json_file:
-            json.dump(all_data, json_file)
+            json.dump(all_data, json_file, indent=2)
+        
+        send_email(files)
         return JsonResponse({"message": "Form submitted and saved as JSON!"}, status=201)
 
     return JsonResponse({"error": "Invalid request method"}, status=400)
