@@ -1,20 +1,40 @@
-import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Component, inject, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-feed',
   standalone: true,
-  imports: [ RouterLink ],
+  imports: [ RouterLink, CommonModule],
   templateUrl: './feed.component.html',
   styleUrls: ['./feed.component.scss']
 })
-export class FeedComponent {
-  cards = [
-    { name: 'Fulano de Tal', role: 'Vereador', party: 'Partido', location: 'Natal/RN', image: 'images/canditado-generico.png' },
-    { name: 'Fulano de Tal', role: 'Prefeito', party: 'Partido', location: 'Natal/RN', image: 'images/canditado-generico.png' },
-    { name: 'Fulano de Tal', role: 'Governador', party: 'Partido', location: 'RN', image: 'images/canditado-generico.png' },
-    { name: 'Fulano de Tal', role: 'Dep. Estadual', party: 'Partido', location: 'RN', image: 'images/canditado-generico.png' },
-    { name: 'Fulano de Tal', role: 'Dep. Federal', party: 'Partido', location: 'RN', image: 'images/canditado-generico.png' },
-    { name: 'Fulano de Tal', role: 'Senador', party: 'Partido', location: 'RN', image: 'images/canditado-generico.png' }
-  ];
+export class FeedComponent implements OnInit{
+  httpclient = inject(HttpClient);
+  data: any[] = [];
+
+  ngOnInit(): void {
+      this.fetchData();
+  }
+
+  fetchData(){
+    this.httpclient.get('http://127.0.0.1:8000/api/feed/').subscribe((data: any) => {
+      console.log(data);
+      this.data = data.results;
+    });
+  }
+
+  trackById(index: number, item: any): number {
+    return item.id;
+  }
+  
+  groupCandidates(candidates: any[], groupSize: number): any[][] {
+    const groups = [];
+    for (let i = 0; i < candidates.length; i += groupSize) {
+      groups.push(candidates.slice(i, i + groupSize));
+    }
+    return groups;
+  }
+  
 }
