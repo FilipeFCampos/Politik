@@ -1,28 +1,28 @@
 <br><br><br><br><br>
 <div style="display: flex; justify-content: center; align-items: center;">
-    <form action="">
+    <form  action="http://127.0.0.1:8000/api/submit-form/" method="POST" enctype="multipart/form-data">
 
         <div class="content">
             <h1>Solicite um cadastro</h1>
             <label for="nome" class="form-label">Dados pessoais</label>
             <div class="input-group mb-3" style="display: flex;">
                 <span class="input-group-text" id="basic-addon1">Nome:</span>
-                <input type="text" (change)="setName($event)" id="nome" class="form-control"
+                <input type="text" (change)="setName($event)" id="nome" name="nome" class="form-control"
                     placeholder="Seu nome completo" aria-label="nome" aria-describedby="basic-addon1" required>
 
                 <span class="input-group-text" id="basic-addon1.1">Nascimento:</span>
-                <input type="date" class="form-control" id="nascimento" aria-label="nascimento"
+                <input type="date" class="form-control" id="nascimento" name="nascimento" aria-label="nascimento"
                     aria-describedby="basic-addon1" required>
 
             </div>
 
             <div class="input-group mb-3">
                 <span class="input-group-text" id="basic-addon2">&#64; Email:</span>
-                <input type="email" class="form-control" id="email" placeholder="exemplo@gmail.com" aria-label="email"
+                <input type="email" class="form-control" id="email" name="email" placeholder="exemplo@gmail.com" aria-label="email"
                     aria-describedby="basic-addon2" required>
 
                 <span class="input-group-text" id="basic-addon2.1">CPF:</span>
-                <input #campoCPF type="text" class="form-control" maxlength="14" id="CPF" placeholder="Digite o seu CPF"
+                <input #campoCPF type="text" class="form-control" maxlength="14" id="CPF" name="CPF" placeholder="Digite o seu CPF"
                     aria-label="cpf" aria-describedby="basic-addon1" required>
             </div>
 
@@ -30,54 +30,28 @@
             <div class="input-group mb-3">
 
                 <span class="input-group-text" id="basic-addon3">Endereço:</span>
-                <input type="text" class="form-control" id="endereço" placeholder="Rua do Exemplo 9999"
+                <input type="text" class="form-control" id="endereço" name="endereço" placeholder="Rua do Exemplo 9999"
                     aria-label="endereço" aria-describedby="basic-addon2" required>
 
                 <span class="input-group-text" id="basic-addon3.1">Cidade:</span>
-                <input type="text" class="form-control" id="cidade" placeholder="Digite a sua cidade"
+                <input type="text" class="form-control" id="cidade" name="cidade" placeholder="Digite a sua cidade"
                     aria-label="cidade" aria-describedby="basic-addon1" required>
 
                 <span class="input-group-text" id="basic-addon3.2">Bairro:</span>
-                <input type="text" class="form-control" id="cidade" placeholder="Digite o seu bairro"
+                <input type="text" class="form-control" id="bairro" name="bairro" placeholder="Digite o seu bairro"
                     aria-label="bairro" aria-describedby="basic-addon1" required>
             </div>
 
             <div class="input-group mb-3">
 
                 <span class="input-group-text" id="basic-addon3.3">CEP:</span>
-                <input #campoCEP type="text" class="form-control" id="CEP" maxlength="9"
+                <input #campoCEP type="text" class="form-control" id="CEP" name="CEP" maxlength="9"
                     placeholder="Digite o código postal" aria-label="cep" aria-describedby="basic-addon1" required>
 
                 <span class="input-group-text" id="basic-addon3.4">Estado:</span>
                 <select id="estado" class="form-select-sm" name="estado" required>
                     <option selected disabled></option>
-                    <option value="AC">AC</option>
-                    <option value="AL">AL</option>
-                    <option value="AP">AP</option>
-                    <option value="AM">AM</option>
-                    <option value="BA">BA</option>
-                    <option value="CE">CE</option>
-                    <option value="DF">DF</option>
-                    <option value="ES">ES</option>
-                    <option value="GO">GO</option>
-                    <option value="MA">MA</option>
-                    <option value="MT">MT</option>
-                    <option value="MS">MS</option>
-                    <option value="MG">MG</option>
-                    <option value="PA">PA</option>
-                    <option value="PB">PB</option>
-                    <option value="PR">PR</option>
-                    <option value="PE">PE</option>
-                    <option value="PI">PI</option>
-                    <option value="RJ">RJ</option>
-                    <option value="RN">RN</option>
-                    <option value="RS">RS</option>
-                    <option value="RO">RO</option>
-                    <option value="RR">RR</option>
-                    <option value="SC">SC</option>
-                    <option value="SP">SP</option>
-                    <option value="SE">SE</option>
-                    <option value="TO">TO</option>
+                    <option *ngFor="let state of estados" [value]="state">{{ state }}</option>
                 </select>
             </div>
 
@@ -85,15 +59,15 @@
 
             <div class="input-group mb-3">
                 <span class="input-group-text" id="basic-addon4">Partido:</span>
-                <input type="text" class="form-control" id="partido" placeholder="Nome do partido" aria-label="partido"
+                <input type="text" class="form-control" id="partido" name="partido" placeholder="Nome do partido" aria-label="partido"
                     required>
 
                 <span class="input-group-text" id="basic-addon4.1">Sigla:</span>
-                <input type="text" class="form-control" id="sigla" placeholder="Sigla do partido" aria-label="partido"
+                <input type="text" class="form-control" id="sigla" name="sigla" placeholder="Sigla do partido" aria-label="partido"
                     required>
 
                 <span class="input-group-text" id="basic-addon4.2">CNPJ:</span>
-                <input #campoCNPJ type="text" class="form-control" maxlength="18" id="CNPJ"
+                <input #campoCNPJ type="text" class="form-control" maxlength="18" id="CNPJ" name="CNPJ"
                     placeholder="Digite o CNPJ do partido" aria-label="cnpj" aria-describedby="basic-addon1"
                     required>
             </div>
@@ -104,7 +78,7 @@
                         <div class="input-group mb-3">
 
                             <span class="input-group-text" id="basic-addon5">Escopo:</span>
-                            <select (change)="setScope($event)" id="estado" class="form-select-sm" name="estado"
+                            <select (change)="setScope($event)" id="escopo" class="form-select-sm" name="escopo"
                                 required>
                                 <option selected disabled></option>
                                 <option value="federal">Federal</option>
@@ -119,7 +93,7 @@
 
                             <span class="input-group-text" id="basic-addon5">Cargo:</span>
                             @if (escopo === 'federal') {
-                            <select id="cargo-federal" class="form-select-sm" name="cargo-federal" required>
+                            <select id="cargo" class="form-select-sm" name="cargo" required>
                                 <option selected disabled></option>
                                 <option value="presidente">Presidente</option>
                                 <option value="vice-presidente">Vice-presidente</option>
@@ -127,7 +101,7 @@
                             </select>
                             }
                             @else if (escopo === 'estadual') {
-                            <select id="cargo-estadual" class="form-select-sm" name="cargo-estadual" required>
+                            <select id="cargo" class="form-select-sm" name="cargo" required>
                                 <option selected disabled></option>
                                 <option value="governador">Governador</option>
                                 <option value="deputado-estadual">Deputado</option>
@@ -136,39 +110,13 @@
 
                             <span class="input-group-text" style="margin-left: 0.01px;"
                                 id="basic-addon3.4">Estado:</span>
-                            <select id="estado/candidato" class="form-select-sm" name="estado" required>
+                            <select id="estado-candidato" class="form-select-sm" name="estado-candidato" required>
                                 <option selected disabled></option>
-                                <option value="AC">AC</option>
-                                <option value="AL">AL</option>
-                                <option value="AP">AP</option>
-                                <option value="AM">AM</option>
-                                <option value="BA">BA</option>
-                                <option value="CE">CE</option>
-                                <option value="DF">DF</option>
-                                <option value="ES">ES</option>
-                                <option value="GO">GO</option>
-                                <option value="MA">MA</option>
-                                <option value="MT">MT</option>
-                                <option value="MS">MS</option>
-                                <option value="MG">MG</option>
-                                <option value="PA">PA</option>
-                                <option value="PB">PB</option>
-                                <option value="PR">PR</option>
-                                <option value="PE">PE</option>
-                                <option value="PI">PI</option>
-                                <option value="RJ">RJ</option>
-                                <option value="RN">RN</option>
-                                <option value="RS">RS</option>
-                                <option value="RO">RO</option>
-                                <option value="RR">RR</option>
-                                <option value="SC">SC</option>
-                                <option value="SP">SP</option>
-                                <option value="SE">SE</option>
-                                <option value="TO">TO</option>
+                                <option *ngFor="let state of estados" [value]="state">{{ state }}</option>
                             </select>
                             }
                             @else if (escopo === 'municipal') {
-                            <select id="cargo-estadual" class="form-select-sm" name="cargo-estadual" required>
+                            <select id="cargo" class="form-select-sm" name="cargo" required>
                                 <option selected disabled></option>
                                 <option value="prefeito">Prefeito</option>
                                 <option value="vereador">Vereador</option>
@@ -176,7 +124,7 @@
 
                             <span class="input-group-text" style="margin-left: 0.01px;"
                                 id="basic-addon3.1">Município</span>
-                            <input type="text" class="form-control" id="municipio/candidato"
+                            <input type="text" class="form-control" id="municipio-candidato"
                                 placeholder="Digite o município" aria-label="cidade" aria-describedby="basic-addon1"
                                 required>
                             }
@@ -192,22 +140,22 @@
 
             <div class="input-group">
                 <span class="input-group-text">Mensagem:</span>
-                <textarea class="form-control" aria-label="With textarea"></textarea>
+                <textarea id="mensagem" name="mensagem" class="form-control" aria-label="With textarea"></textarea>
             </div>
             <br>
             <div class="container text-left">
                 <div class="row">
                     <div class="col" style="padding-left: 0px;">
                         <label for="formFile" class="form-label">Foto da identidade</label>
-                        <input class="form-control" type="file" id="foto-identidade" required>
+                        <input class="form-control" type="file" id="foto-identidade" name="foto-identidade" required>
                     </div>
                     <div class="col">
                         <label for="formFile" class="form-label">Comprovante de residência</label>
-                        <input class="form-control" type="file" id="foto-comprovante-residencia" required>
+                        <input class="form-control" type="file" id="foto-comprovante-residencia" name="foto-comprovante-residencia" required>
                     </div>
                     <div class="col" style="padding-right: 0px;">
                         <label for="formFile" class="form-label">Documento de aplicação</label>
-                        <input class="form-control" type="file" id="documento-aplicacao" required>
+                        <input class="form-control" type="file" id="documento-aplicacao" name="documento-aplicacao" required>
                     </div>
                 </div>
             </div>

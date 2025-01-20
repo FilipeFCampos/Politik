@@ -1,15 +1,22 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-cadastro',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './cadastro.component.html',
   styleUrl: './cadastro.component.scss'
 })
 
 export class CadastroComponent implements AfterViewInit {
-  
+
+  estados: string[] = [
+    'AC', 'AL', 'AP', 'AM', 'BA', 'CE', 'DF', 'ES', 'GO', 'MA',
+    'MT', 'MS', 'MG', 'PA', 'PB', 'PR', 'PE', 'PI', 'RJ', 'RN',
+    'RS', 'RO', 'RR', 'SC', 'SP', 'SE', 'TO',
+  ];
+
   @ViewChild('campoCPF') campoCPF!: ElementRef<HTMLInputElement>;
   @ViewChild('campoCEP') campoCEP!: ElementRef<HTMLInputElement>;
   @ViewChild('campoCNPJ') campoCNPJ!: ElementRef<HTMLInputElement>;
