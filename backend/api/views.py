@@ -66,15 +66,6 @@ def submit_form(request):
             documento_aplicacao=files.get('documento-aplicacao'),
         )
         submission.save()
-        return JsonResponse({"message": "Form submitted successfully!"}, status=201)
-
-    return JsonResponse({"error": "Invalid request method"}, status=400)
-
-import json
-'''
-@csrf_exempt
-def submit_form(request):
-    if request.method == "POST":
         data = request.POST.dict()
         files = request.FILES.dict()
         all_data = {**data, **{key: str(value) for key, value in files.items()}}
