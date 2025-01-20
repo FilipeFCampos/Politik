@@ -1,14 +1,43 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-cadastro',
   standalone: true,
-  imports: [],
+  imports: [FormsModule, CommonModule],
   templateUrl: './cadastro.component.html',
   styleUrl: './cadastro.component.scss'
 })
 
 export class CadastroComponent implements AfterViewInit {
+
+  formData: any = {
+    nome: '',
+    nascimento: '',
+    email: '',
+    cpf: '',
+    endereco: '',
+    cidade: '',
+    bairro: ''
+  };
+
+  constructor(private http: HttpClient) {}
+
+  onSubmit() {
+    const apiUrl = 'http://127.0.0.1:8000/api/submit-form/';
+    this.http.post(apiUrl, this.formData).subscribe({
+      next: (response) => {
+        console.log('Form submitted successfully:', response);
+        alert('Formulário enviado com sucesso!');
+      },
+      error: (error) => {
+        console.error('Error submitting form:', error);
+        alert('Erro ao enviar o formulário.');
+      }
+    });
+  }
   
   @ViewChild('campoCPF') campoCPF!: ElementRef<HTMLInputElement>;
   @ViewChild('campoCEP') campoCEP!: ElementRef<HTMLInputElement>;

@@ -1,13 +1,13 @@
 <br><br><br><br><br>
 <div style="display: flex; justify-content: center; align-items: center;">
-    <form  action="/api/submit-form/" method="POST" enctype="multipart/form-data">
+    <form (ngSubmit)="onSubmit()" #cadastroForm="ngForm">
 
         <div class="content">
             <h1>Solicite um cadastro</h1>
             <label for="nome" class="form-label">Dados pessoais</label>
             <div class="input-group mb-3" style="display: flex;">
                 <span class="input-group-text" id="basic-addon1">Nome:</span>
-                <input type="text" (change)="setName($event)" id="nome" class="form-control"
+                <input type="text" [(ngModel)]="formData.nome" (change)="setName($event)" id="nome" class="form-control"
                     placeholder="Seu nome completo" aria-label="nome" aria-describedby="basic-addon1" required>
 
                 <span class="input-group-text" id="basic-addon1.1">Nascimento:</span>
