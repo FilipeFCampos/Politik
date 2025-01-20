@@ -44,4 +44,4 @@ testem.log
 Thumbs.db
 
 # Cache
-*pyc
+*.pyc

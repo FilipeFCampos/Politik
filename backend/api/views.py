@@ -14,6 +14,7 @@ from django.views.decorators.csrf import csrf_exempt
 from django.http import JsonResponse
 from django.core.files.storage import default_storage
 from .models import FormSubmission
+import json
 
 @csrf_exempt  # Temporarily disable CSRF protection for testing (remove in production)
 def submit_form(request):
@@ -41,15 +42,6 @@ def submit_form(request):
             documento_aplicacao=files.get('documento-aplicacao'),
         )
         submission.save()
-        return JsonResponse({"message": "Form submitted successfully!"}, status=201)
-
-    return JsonResponse({"error": "Invalid request method"}, status=400)
-
-import json
-'''
-@csrf_exempt
-def submit_form(request):
-    if request.method == "POST":
         data = request.POST.dict()
         files = request.FILES.dict()
         all_data = {**data, **{key: str(value) for key, value in files.items()}}
@@ -57,4 +49,4 @@ def submit_form(request):
             json.dump(all_data, json_file)
         return JsonResponse({"message": "Form submitted and saved as JSON!"}, status=201)
 
-    return JsonResponse({"error": "Invalid request method"}, status=400)'''
+    return JsonResponse({"error": "Invalid request method"}, status=400)
