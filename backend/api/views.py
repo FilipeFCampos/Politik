@@ -24,7 +24,7 @@ def submit_form(request):
             nome=data.get('nome'),
             nascimento=data.get('nascimento'),
             email=data.get('email'),
-            cpf=data.get('cpf'),
+            cpf=data.get('CPF'),
             endereco=data.get('endereço'),
             cidade=data.get('cidade'),
             bairro=data.get('bairro'),
@@ -46,7 +46,7 @@ def submit_form(request):
     return JsonResponse({"error": "Invalid request method"}, status=400)
 
 import json
-
+'''
 @csrf_exempt
 def submit_form(request):
     if request.method == "POST":
@@ -57,4 +57,4 @@ def submit_form(request):
             json.dump(all_data, json_file)
         return JsonResponse({"message": "Form submitted and saved as JSON!"}, status=201)
 
-    return JsonResponse({"error": "Invalid request method"}, status=400)
+    return JsonResponse({"error": "Invalid request method"}, status=400)'''
